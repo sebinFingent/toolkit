@@ -1,0 +1,24 @@
+table,td,th {
+    border: 1px solid black;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background-color: gray;
+    color: #fff;
+    position: relative;
+    
+    height: 25px;
+    .draggable-header {
+        position: absolute;
+        width: 100%;
+    }
+}
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+

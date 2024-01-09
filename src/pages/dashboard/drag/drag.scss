@@ -1,0 +1,48 @@
+
+.arrow {
+    width: 30px;
+    height: 16px;
+    position: absolute;
+    right: -30px;
+    top: 49%;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+}
+.drag-box {
+    height: 200px;
+    background-color: aliceblue;
+    width: 99%;
+    border: 2px dashed  red;
+    margin-bottom: 20px;
+    overflow-y: auto;
+}
+.selected-items{
+    width: 56px;
+    background-color: gray;
+    border: 1px solid #ffff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    color: #ffff;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 3px;
+    position: relative;
+}
+.selected-items:last-child {
+    .arrow {
+        display: none;
+    }
+}
+
+.drag-item {
+    width: 120px;
+    height: 34px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: blue;
+    color: #ffff;
+}

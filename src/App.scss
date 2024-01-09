@@ -1,0 +1,13 @@
+@import '../styles/variables.scss';
+.container{
+    width: 100%;
+    background-color: #134679;
+    position: relative;
+    height: ($container_height)+vh;
+}
+
+.fc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

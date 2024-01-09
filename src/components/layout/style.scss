@@ -1,0 +1,85 @@
+@import '../../../styles/_mixins.scss';
+
+$nav_width: 80px;
+$nav_expanded_width: 200px;
+
+nav {
+    width: ($nav_width);
+    background-color: #f7f7f7;
+    height: 100Vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 30ms ease-in-out;
+    border-right: #0000008f solid;
+   
+    @include for-size(phone-only) {
+        width: 0px;
+        display: none;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+        text-decoration: none;
+        color: black;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-left: 2px;
+        li {
+            padding: 4px;
+            margin-top: 2px;
+            font-weight: 600;
+            a {
+
+                text-decoration: none;
+            }
+        }
+        li:hover {
+            color: #446571;
+        }
+    }
+}
+
+
+.header {
+    width:calc(100% - $nav_width);
+    background-color:#0000008f;
+    height: 5vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    transition: width 30ms ease-in-out;
+    @include for-size(phone-only) {
+        width: 100%;
+    }
+}
+
+main {
+    position: absolute;
+    background-color: #fff;
+    flex-grow: 1;
+    top: 0;
+    bottom: 0;
+    width: calc(100% - $nav_width);
+    right: 0;
+    transition: width 30ms ease-in-out;
+    @include for-size(phone-only) {
+        width: 100%;
+    }
+}
+.expanded {
+    main {
+        width: calc(100% - $nav_expanded_width);
+    }
+    .header {
+        width:calc(100% - $nav_expanded_width);
+   
+    }
+    nav {
+        width:calc( $nav_expanded_width - 1px);
+    }
+
+}

@@ -1,0 +1,40 @@
+.canban-wrapper {
+    background-color: gray;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    .stage {
+        width: 25px;
+        border: 2px solid black;
+        flex: 1;
+        margin: 12px 10px;
+        padding: 20px;
+    }
+}
+
+.card-wrapper {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 0.5px solid ;
+    border-radius: 15px;
+    margin: 20px;
+  
+    
+}
+#move-box{
+    position: fixed;
+    top: -100;
+    left: -100;
+}
+.card-space-handler {
+    border: 0px solid;
+    border-color: transparent;
+    &:hover {
+        animation: mymove 0.1s forwards;
+    }
+}
+@keyframes mymove {
+    from {border-top-width:  20px;}
+    to {border-top-width:  60px;}
+  }
