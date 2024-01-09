@@ -1,6 +1,6 @@
 export const STAGES = [
   {
-    stageName: "TO DO",
+    stageName: "TO DO ss",
     id: 1,
     cards: [
       {
